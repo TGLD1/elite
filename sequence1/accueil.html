@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séquence 1 : Introduction au HTML</title>
+    <!-- Lien relatif vers le CSS racine -->
+    <link rel="stylesheet" href="../style.css">
+    <style> body { background-color: #f5f7fa; } </style>
+</head>
+<body>
+
+    <!-- En-tête de la séquence avec cercle de progression -->
+    <div style="background-color: #085691; padding: 20px 15px 10px 15px; border-radius: 0 0 20px 20px; margin-bottom: 10px;">
+        <div class="module-nav" style="max-width: 100%;">
+            <a href="../index.html" class="back-btn">←</a>
+            <h3 style="color: white; font-size: 16px; flex:1; text-align: center; margin: 0;">Introduction au HTML</h3>
+            <div class="module-progress-ring">
+                <svg viewBox="0 0 40 40">
+                    <circle id="ring-circle" cx="20" cy="20" r="16" stroke-dasharray="100.53" stroke-dashoffset="100.53" />
+                </svg>
+                <span id="ring-percent">0%</span>
+            </div>
+        </div>
+        <div class="tabs" style="max-width: 100%; border-bottom-color: rgba(255,255,255,0.2);">
+            <a href="#" class="active" style="color: white; border-bottom-color: white;">Index</a>
+            <a href="#" style="color: rgba(255,255,255,0.7);">Description</a>
+        </div>
+    </div>
+
+    <!-- Liste des Activités -->
+    <div class="activity-list" style="padding: 0 15px;">
+
+        <a href="activite1.html" class="activity-item c-blue">
+            <div class="act-info">
+                <h4>1. Introduction</h4>
+                <p><span>🕒 8 min</span> <span>📄 2 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite1">○</div>
+        </a>
+
+        <a href="activite2.html" class="activity-item c-red">
+            <div class="act-info">
+                <h4>2. Qu'est-ce que le Web ?</h4>
+                <p><span>🕒 4 min</span> <span>📄 9 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite2">○</div>
+        </a>
+
+        <a href="activite3.html" class="activity-item c-purple">
+            <div class="act-info">
+                <h4>3. Comprendre le fonctionnement du Web</h4>
+                <p><span>🕒 8 min</span> <span>📄 9 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite3">○</div>
+        </a>
+
+        <a href="activite4.html" class="activity-item c-yellow">
+            <div class="act-info">
+                <h4>4. Apprentissage du développement web</h4>
+                <p><span>🕒 4 min</span> <span>📄 5 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite4">○</div>
+        </a>
+
+        <a href="activite5.html" class="activity-item c-green">
+            <div class="act-info">
+                <h4>5. Logiciels requis</h4>
+                <p><span>🕒 7 min</span> <span>📄 6 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite5">○</div>
+        </a>
+
+        <a href="activite6.html" class="activity-item c-magenta">
+            <div class="act-info">
+                <h4>6. Rencontrez le HTML</h4>
+                <p><span>🕒 9 min</span> <span>📄 9 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite6">○</div>
+        </a>
+
+        <a href="activite7.html" class="activity-item c-blue">
+            <div class="act-info">
+                <h4>7. Un regard approfondi sur le HTML</h4>
+                <p><span>🕒 12 min</span> <span>📄 9 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite7">○</div>
+        </a>
+
+        <a href="activite8.html" class="activity-item c-red">
+            <div class="act-info">
+                <h4>8. Votre première page Web</h4>
+                <p><span>🕒 5 min</span> <span>📄 6 pages</span></p>
+            </div>
+            <div class="act-status" data-activite="activite8">○</div>
+        </a>
+
+        <a href="activite9.html" class="activity-item c-purple" style="border-left-color: #f39c12;">
+            <div class="act-info">
+                <h4>9. Test de validation</h4>
+                <p><span>🕒 10 min</span> <span>📄 5 questions</span></p>
+            </div>
+            <div class="act-status" data-activite="activite9" style="background: #f39c12;">★</div>
+        </a>
+
+    </div>
+
+    <!-- Bouton PRO flottant (Identique à la racine) -->
+    <button class="pro-btn" onclick="alert('Version PRO disponible prochainement !')">
+        <span style="font-size: 18px;">👑</span> ESSAYER PRO <small>Bientôt</small>
+    </button>
+
+    <footer class="site-footer">
+        © 2026 TGLD Élite — Créé par <strong>Divin</strong> (FASTEK) ·
+        <a href="https://wa.me/2290164409445" target="_blank" rel="noopener">WhatsApp</a> ·
+        <a href="mailto:tgldivin@gmail.com">tgldivin@gmail.com</a>
+    </footer>
+
+    <script src="../progress.js"></script>
+    <script>
+        // Coche chaque activité réellement terminée par l'utilisateur
+        document.querySelectorAll('.act-status[data-activite]').forEach(el => {
+            const activite = el.getAttribute('data-activite');
+            if (TGLD.estTermine('sequence1', activite)) {
+                // Le "★" de l'activité 9 (quiz) reste visible, on ajoute juste la coche ailleurs
+                if (activite !== 'activite9') el.textContent = '✓';
+            }
+        });
+
+        // Anneau de progression (cercle SVG) basé sur la progression réelle
+        const pourcentage = TGLD.pourcentage('sequence1');
+        const circonference = 100.53;
+        document.getElementById('ring-circle').style.strokeDashoffset =
+            circonference - (circonference * pourcentage / 100);
+        document.getElementById('ring-percent').textContent = pourcentage + '%';
+    </script>
+
+</body>
+</html>

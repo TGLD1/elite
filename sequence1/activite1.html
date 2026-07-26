@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activité 1 : Introduction</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <h1 class="section-header">Séquence 1 : Introduction à HTML</h1>
+    <p style="color: #4a5c72; margin-top: -20px; margin-bottom: 10px;">Activité 1 : Introduction</p>
+
+    <div class="progress-track-page"><div class="progress-fill" id="progress-fill-global" style="width:0%;"></div></div>
+
+    <div class="activity-container">
+
+        <!-- Carte 1 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="card-title">Développement Web</div>
+            <div class="content">
+                <h2>Voulez-vous apprendre le développement web ?</h2>
+                <p>C'est un excellent choix, car le développement web est un parcours professionnel incroyable. Il offre une carrière rapide et stimulante, centrée sur la résolution créative de problèmes et l'innovation continue.</p>
+                <p>Mais apprendre le développement web peut s'avérer décourageant, car il existe des millions de ressources en ligne. C'est pourquoi nous avons conçu ce cours. Votre solution unique pour tous vos besoins en développement web.</p>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <h2>Commencer avec Web X</h2>
+                <p>Ce tutoriel de développement web fera de vous un développeur web en y consacrant quelques minutes par jour pour parcourir chaque sujet, comprendre la théorie sous-jacente et implémenter divers programmes, vous aidant ainsi à apprendre à coder.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-links">
+        <a href="accueil.html" class="btn-nav btn-prev">← Accueil</a>
+        <a href="activite2.html" class="btn-nav btn-next" id="lien-suivant">Suivant →</a>
+    </div>
+
+    <script src="../progress.js"></script>
+    <script>
+        TGLD.appliquerBarreActivite('sequence1');
+        TGLD.lierValidationActivite('sequence1', 'activite1', '#lien-suivant');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activité 6 : Rencontrez le HTML</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <h1 class="section-header">Activité 6 : Rencontrez le HTML</h1>
+
+    <div class="progress-track-page"><div class="progress-fill" id="progress-fill-global" style="width:0%;"></div></div>
+
+    <div class="activity-container">
+
+        <!-- Carte 1 -->
+        <div id="card1" class="card">
+            <div class="content">
+                <p>Les ordinateurs ne comprennent pas la langue que nous parlons (l'anglais), et nous ne parlons pas la langue qu'ils comprennent (le langage binaire). Par conséquent, nous devons apprendre des langages et des techniques que les humains et les ordinateurs comprennent.</p>
+                <p>Ainsi, nous pouvons faire faire aux ordinateurs des choses et exécuter des tâches en écrivant un programme pour eux en utilisant divers langages de programmation. Les langages de programmation sont les langages que les ordinateurs comprennent et que nous pouvons apprendre, nous permettant ainsi de communiquer avec ces machines.</p>
+                <p style="text-align:center; font-weight:600; margin: 15px 0;">C'est ce qu'on appelle le <strong>Codage / la Programmation</strong>.</p>
+                <p>Pour conclure, la programmation est la séquence d'étapes d'instructions que nous écrivons pour l'ordinateur afin qu'il puisse comprendre et effectuer certaines tâches pour nous !</p>
+            </div>
+            <div class="card-nav">
+                <span class="btn-disabled">Précédent</span>
+                <a href="#card2" class="btn-next">Suivant</a>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div id="card2" class="card">
+            <div class="content">
+                <p>Vous connaissez peut-être divers langages de programmation tels que <strong>Java</strong>, <strong>Python</strong>, <strong>C</strong>, et bien d'autres, qui vous permettent d'écrire des programmes informatiques et peuvent être utilisés pour le développement de logiciels, ainsi que pour de nombreux autres cas d'utilisation.</p>
+                <p>Maintenant que nous comprenons que la programmation est la séquence d'instructions que nous écrivons pour l'ordinateur afin qu'il puisse comprendre et effectuer des tâches pour nous. Et si la tâche consistait à interagir avec Internet et à créer une page Web ?</p>
+                <p style="text-align:center; margin-top: 15px;">Voici l'arrivée des <strong>langages de balisage</strong> !</p>
+            </div>
+            <div class="card-nav">
+                <a href="#card1" class="btn-prev">Précédent</a>
+                <a href="#card3" class="btn-next">Suivant</a>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div id="card3" class="card">
+            <div class="content">
+                <p>Les <strong>langages de balisage</strong> sont des langages qui peuvent être utilisés pour créer divers documents pouvant être chargés dans un navigateur Web via Internet, vous aidant ainsi à interagir avec le Web et à développer diverses pages Web.</p>
+                <p>Ce n'est peut-être pas une définition parfaite et technique des langages de balisage, mais elle suffit pour vous donner un avant-goût de ce que sont exactement ces langages.</p>
+                <p>L'un de ces langages de balisage est le <strong>HTML</strong>, que nous allons apprendre dans ce cours et qui vous permettra de créer des pages Web et de travailler sur le Web.</p>
+            </div>
+            <div class="card-nav">
+                <a href="#card2" class="btn-prev">Précédent</a>
+                <a href="#card4" class="btn-next">Suivant</a>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div id="card4" class="card">
+            <div class="content">
+                <h2>Le langage du Web - HTML</h2>
+                <p><strong>HTML</strong> signifie HyperText Markup Language (Langage de balisage hypertexte) !</p>
+                <p>C'est la fondation de tous les sites Web et représente le strict minimum nécessaire pour créer un site Web. Selon les statistiques, <strong>environ 94 %</strong> des sites Web actuellement disponibles sur Internet, et probablement tous ceux que vous visitez, sont structurés à l'aide du HTML.</p>
+            </div>
+            <div class="card-nav">
+                <a href="#card3" class="btn-prev">Précédent</a>
+                <a href="#card5" class="btn-next">Suivant</a>
+            </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div id="card5" class="card">
+            <div class="content">
+                <p>Au niveau le plus basique, c'est un langage de balisage pour le Web qui définit la structure du Web et constitue l'un des éléments de base les plus fondamentaux de chaque site Web. Gardant cela à l'esprit, nous examinerons le <strong>HTML</strong> plus en profondeur dans la section suivante.</p>
+            </div>
+            <div class="card-nav">
+                <a href="#card4" class="btn-prev">Précédent</a>
+                <span class="btn-disabled">Suivant</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation entre les Activités (bas de page) -->
+    <div class="nav-links">
+        <a href="activite5.html" class="btn-nav btn-prev">← Retour (Act. 5)</a>
+        <a href="activite7.html" class="btn-nav btn-next" id="lien-suivant">Suivant (Act. 7) →</a>
+    </div>
+
+    <script src="../progress.js"></script>
+    <script>
+        TGLD.appliquerBarreActivite('sequence1');
+        TGLD.lierValidationActivite('sequence1', 'activite6', '#lien-suivant');
+    </script>
+
+</body>
+</html>

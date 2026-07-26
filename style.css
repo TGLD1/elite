@@ -1,0 +1,696 @@
+/* Reset & Styles généraux */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #eef2f6;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Conteneur des cartes de l'activité */
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* En-tête : Barre de progression */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.close-icon {
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.progress-track {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #e0e7ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0d4a7a 0%, #8cc6ec 80%);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Barre de progression unique, en haut de chaque page d'activité :
+   reflète la progression réelle de l'utilisateur dans la séquence */
+.progress-track-page {
+    max-width: 500px;
+    width: 100%;
+    height: 6px;
+    background-color: #e0e7ef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: -10px auto 25px auto;
+}
+
+/* Titre du cours */
+.card-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a2639;
+    margin-top: -5px;
+}
+
+/* Contenu textuel */
+.content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a3b5d;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a5c72;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.highlight-box {
+    background-color: #f0f4f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: #1a3b5d;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* Titres de sections */
+.section-header {
+    font-size: 28px;
+    color: #1a3b5d;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Navigation entre activités */
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-nav {
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-prev {
+    background-color: transparent;
+    color: #4a5c72;
+    border: 1px solid #d0d6e0;
+}
+.btn-prev:hover {
+    background-color: #f0f4f9;
+    border-color: #a0aab8;
+}
+
+.btn-next {
+    background-color: #085691;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(8, 86, 145, 0.25);
+}
+.btn-next:hover {
+    background-color: #064174;
+    transform: translateY(-2px);
+}
+
+.btn-disabled {
+    background-color: #e0e7ef;
+    color: #888;
+    pointer-events: none;
+    flex: 1;
+    text-align: center;
+    padding: 14px;
+    border-radius: 50px;
+}
+
+/* --- Styles ajoutés pour l'Activité 7 et la navigation interne --- */
+.card-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.card-nav .btn-prev, .card-nav .btn-next {
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    padding: 16px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.card-nav .btn-prev {
+    background-color: transparent;
+    color: #4a5c72;
+    border: 1px solid #d0d6e0;
+}
+
+.card-nav .btn-prev:hover {
+    background-color: #f0f4f9;
+    border-color: #a0aab8;
+    transform: translateY(-2px);
+}
+
+.card-nav .btn-next {
+    background-color: #085691;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(8, 86, 145, 0.25);
+}
+
+.card-nav .btn-next:hover {
+    background-color: #064174;
+    transform: translateY(-2px);
+}
+
+.card-nav .btn-disabled {
+    background-color: #e0e7ef;
+    color: #888;
+    pointer-events: none;
+    flex: 1;
+    text-align: center;
+    padding: 16px;
+    border-radius: 50px;
+    display: inline-block;
+}
+/* --- Styles ajoutés pour le test de l'Activité 9 --- */
+.test-question {
+    font-weight: 600;
+    color: #1a3b5d;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.answer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.answer-option {
+    display: block;
+    background: #ffffff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #e0e7ef;
+    color: #4a5c72;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+
+}
+
+
+/* --- Styles pour le test interactif sans validation instantanée (Activité 9) --- */
+.answer-option {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Couleur de sélection temporaire (lorsqu'on clique sur une réponse) */
+.answer-option.selected {
+    background: #e8f0fe;
+    border-color: #1a73e8;
+    font-weight: 500;
+}
+
+/* Couleur lors de la correction (vert = bonne réponse, rouge = mauvaise réponse) */
+.answer-option.success-highlight {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+    font-weight: 600;
+}
+.answer-option.error-highlight {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+    font-weight: 600;
+}
+
+/* Boutons spécifiques au test */
+.btn-validate {
+    width: 100%;
+    padding: 16px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.25);
+    margin-top: 15px;
+    transition: all 0.2s ease;
+}
+.btn-validate:hover { background-color: #218838; transform: translateY(-2px); }
+
+.btn-retry {
+    width: 100%;
+    padding: 16px;
+    background-color: #ffc107;
+    color: #1a2639;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+    transition: all 0.2s ease;
+}
+.btn-retry:hover { background-color: #e0a800; transform: translateY(-2px); }
+
+/* Messages de résultat */
+.result-box {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: 600;
+    display: none; /* Caché par défaut */
+}
+.result-box.success { background: #d4edda; color: #155724; display: block; }
+.result-box.error { background: #f8d7da; color: #721c24; display: block; }
+
+/* --- Styles pour la Page d'accueil (Index) --- */
+.home-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home-header h1 {
+    color: #1a3b5d;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.home-header p {
+    color: #4a5c72;
+    font-size: 18px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+@media (min-width: 600px) {
+    .activities-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colonnes sur écran plus large */
+    }
+}
+
+.activity-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activity-card .number {
+    background-color: #eef2f6;
+    color: #1a3b5d;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.activity-card .title {
+    color: #1a3b5d;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.activity-card .subtitle {
+    color: #6c7a8a;
+    font-size: 13px;
+    margin-top: -5px;
+}
+
+.activity-card.status-done {
+    border-left: 5px solid #28a745;
+}
+
+.activity-card.status-locked {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.footer-home {
+    margin-top: 30px;
+    text-align: center;
+    color: #4a5c72;
+    font-size: 14px;
+}
+
+/* =========================================
+   STYLES SPÉCIFIQUES À LA PAGE D'ACCUEIL
+   ========================================= */
+
+/* --- En-tête principal --- */
+.app-header {
+    background: linear-gradient(135deg, #0d4a7a 0%, #085691 100%);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 12px rgba(8, 86, 145, 0.25);
+}
+.header-left { display: flex; align-items: center; gap: 15px; }
+.brand-logo { font-weight: 800; font-size: 22px; letter-spacing: 1px; font-family: 'Segoe UI', sans-serif; }
+.header-right { font-size: 22px; cursor: pointer; }
+
+/* --- Accueil Racine : Grille des Séquences --- */
+.sequence-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+    padding: 10px 0;
+}
+.sequence-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+.sequence-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.sequence-card .seq-info { display: flex; align-items: center; gap: 15px; }
+.sequence-card .seq-icon { width: 50px; height: 50px; background: #f0f4f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.sequence-card .seq-title { font-weight: 600; font-size: 17px; color: #1a2639; }
+.sequence-card .seq-sub { font-size: 13px; color: #6c7a8a; }
+.seq-status { background: #28a745; color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; }
+.seq-status.locked { background: #e0e7ef; color: #6c7a8a; }
+
+/* --- Page Accueil d'une Séquence (Image 2) --- */
+.module-nav { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 500px; margin: 0 auto 10px auto; padding: 0 5px; }
+.back-btn { background: white; border: none; font-size: 20px; cursor: pointer; padding: 8px; border-radius: 50%; color: #1a3b5d; display: flex; align-items: center; }
+.module-progress-ring { width: 50px; height: 50px; position: relative; display: flex; align-items: center; justify-content: center; background: #085691; border-radius: 50%; color: white; font-size: 12px; font-weight: bold; }
+.module-progress-ring svg { position: absolute; top: 0; left: 0; transform: rotate(-90deg); width: 50px; height: 50px; }
+.module-progress-ring circle { fill: none; stroke: white; stroke-width: 4; stroke-dasharray: 125.6; stroke-dashoffset: 0; }
+
+/* --- Onglets de la Séquence --- */
+.tabs { display: flex; width: 100%; max-width: 500px; border-bottom: 1px solid #e0e7ef; margin-bottom: 15px; }
+.tabs a { flex: 1; text-align: center; padding: 12px 0; font-weight: 600; color: #6c7a8a; text-decoration: none; border-bottom: 3px solid transparent; transition: 0.2s; }
+.tabs a.active { color: #085691; border-bottom-color: #085691; }
+
+/* --- Liste des Activités --- */
+.activity-list { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 500px; }
+.activity-item {
+    background: white;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-left: 6px solid #085691; /* Couleur par défaut */
+    transition: 0.2s;
+}
+.activity-item:hover { transform: translateX(4px); }
+.activity-item .act-info h4 { margin: 0 0 5px 0; font-size: 15px; font-weight: 600; color: #1a3b5d; }
+.activity-item .act-info p { margin: 0; font-size: 12px; color: #6c7a8a; display: flex; align-items: center; gap: 15px; }
+.activity-item .act-status { width: 24px; height: 24px; background: #28a745; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; }
+.activity-item .act-status.pending { background: #c9d3dc; color: #6c7a8a; }
+/* Couleurs alternées pour les activités (comme sur l'image 2) */
+.activity-item.c-blue { border-left-color: #2b4f8c; }
+.activity-item.c-red { border-left-color: #c0392b; }
+.activity-item.c-purple { border-left-color: #6c3483; }
+.activity-item.c-yellow { border-left-color: #b7950b; }
+.activity-item.c-green { border-left-color: #1e8449; }
+.activity-item.c-magenta { border-left-color: #8e44ad; }
+
+/* --- Bouton PRO Flottant --- */
+.pro-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #1a2639;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(26, 38, 57, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 999;
+    transition: 0.2s;
+}
+.pro-btn:hover { transform: scale(1.05); background: #2c3e50; }
+.pro-btn small { font-size: 10px; font-weight: 400; background: #4a5c72; padding: 2px 6px; border-radius: 10px; }
+
+/* --- Section Héro de l'accueil --- */
+.hero {
+    width: 100%;
+    background: linear-gradient(135deg, #085691 0%, #1a3b5d 100%);
+    padding: 30px 20px 40px 20px;
+    border-radius: 0 0 28px 28px;
+    color: white;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.hero h1 { font-size: 22px; margin-bottom: 8px; }
+.hero p { font-size: 14px; opacity: 0.9; max-width: 420px; margin: 0 auto; }
+.hero .hero-prenom { color: #8cc6ec; }
+
+/* --- Bannière "en construction" avec appel à l'action --- */
+.construction-banner {
+    max-width: 500px;
+    width: calc(100% - 30px);
+    margin: 0 auto 20px auto;
+    background: #fff8ec;
+    border: 1px solid #f3d9a4;
+    border-radius: 16px;
+    padding: 18px 20px;
+    text-align: center;
+}
+.construction-banner .tag {
+    display: inline-block;
+    background: #f39c12;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.construction-banner h3 { font-size: 16px; color: #1a3b5d; margin-bottom: 6px; }
+.construction-banner p { font-size: 13px; color: #5a6b80; margin-bottom: 14px; line-height: 1.5; }
+
+/* --- Bouton WhatsApp --- */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    transition: 0.2s;
+}
+.whatsapp-btn:hover { transform: scale(1.04); background: #1ebe57; }
+
+/* --- Popup de bienvenue (prénom, local uniquement) --- */
+.welcome-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 35, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+.welcome-modal {
+    background: white;
+    border-radius: 20px;
+    padding: 28px 24px;
+    max-width: 340px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+.welcome-modal h3 { color: #1a3b5d; font-size: 18px; margin-bottom: 8px; }
+.welcome-modal p { color: #6c7a8a; font-size: 13px; margin-bottom: 16px; }
+.welcome-modal input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dce3ec;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.welcome-modal button {
+    width: 100%;
+    background: #085691;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+.welcome-modal .skip-link { display: block; margin-top: 12px; font-size: 12px; color: #9aa8b8; text-decoration: underline; cursor: pointer; }
+
+/* --- Pied de page --- */
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 24px 15px 10px 15px;
+    font-size: 12px;
+    color: #9aa8b8;
+    line-height: 1.8;
+}
+.site-footer a { color: #6c7a8a; text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* --- Bannière "en construction" / contact --- */
+.contact-banner {
+    max-width: 500px;
+    width: 100%;
+    margin: 25px auto 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #085691 0%, #1a3b5d 100%);
+    border-radius: 16px;
+    color: white;
+    text-align: center;
+}
+.contact-banner .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+.contact-banner h3 { font-size: 17px; margin-bottom: 8px; }
+.contact-banner p { font-size: 13px; color: rgba(255,255,255,0.85); margin-bottom: 16px; line-height: 1.5; }
+.contact-banner .contact-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+}
+.contact-btn:hover { transform: scale(1.05); }
+.contact-btn.whatsapp { background: #25D366; color: #06210f; }
+.contact-btn.email { background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.4); }
+
+@media (max-width: 500px) {
+    .app-header { border-radius: 0; max-width: 100%; }
+    .module-nav, .tabs, .activity-list, .sequence-grid { max-width: 100%; }
+    .pro-btn { bottom: 20px; right: 20px; padding: 10px 16px; }
+}

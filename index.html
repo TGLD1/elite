@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGLD Élite - Apprends le développement web</title>
+    <meta name="description" content="TGLD Élite - Plateforme d'apprentissage du développement web. Cours gratuits en français, accompagnement personnalisé sur WhatsApp.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #f5f7fa; padding-bottom: 90px; }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header class="app-header">
+        <div class="header-left">
+            <span style="font-size: 24px;">☰</span>
+            <div class="brand-logo">TGLD <span style="font-size:12px; font-weight:400;">Élite</span></div>
+        </div>
+        <div class="header-right">🔍</div>
+    </header>
+
+    <!-- Section héro -->
+    <div class="hero">
+        <h1 id="hero-titre">Bienvenue sur TGLD Élite 🥳</h1>
+        <p>La plateforme qui t'apprend le développement web pas à pas, gratuitement et en français.</p>
+    </div>
+
+    <!-- Grille des Séquences -->
+    <div class="sequence-grid" style="padding: 0 15px;">
+
+        <!-- Séquence 1 (seule séquence disponible pour le moment) -->
+        <a href="sequence1/accueil.html" class="sequence-card">
+            <div class="seq-info">
+                <div class="seq-icon">💡</div>
+                <div>
+                    <div class="seq-title">1. Introduction au HTML</div>
+                    <div class="seq-sub">9 activités • 45 min</div>
+                </div>
+            </div>
+            <div class="seq-status" id="statut-sequence1">Pas commencée</div>
+        </a>
+
+    </div>
+
+    <!-- Bannière séquences à venir + appel à l'action WhatsApp -->
+    <div class="construction-banner">
+        <span class="tag">🚧 EN CONSTRUCTION</span>
+        <h3>Les séquences CSS et JavaScript arrivent bientôt !</h3>
+        <p>
+            Tu veux apprendre plus vite, ne rien rater des prochaines séquences et bénéficier d'un
+            accompagnement personnalisé pour bien progresser ? Écris-moi directement, je réponds perso 👇
+        </p>
+        <a class="whatsapp-btn"
+           href="https://wa.me/2290164409445?text=Bonjour%20%21%20Je%20viens%20de%20la%20plateforme%20TGLD%20%C3%89lite%20et%20j%27aimerais%20%C3%AAtre%20accompagn%C3%A9%28e%29%20pour%20bien%20apprendre%20%F0%9F%9A%80"
+           target="_blank" rel="noopener">
+            💬 Contacter sur WhatsApp
+        </a>
+    </div>
+
+    <!-- Bouton PRO flottant -->
+    <button class="pro-btn" onclick="alert('Version PRO disponible prochainement !')">
+        <span style="font-size: 18px;">👑</span> ESSAYER PRO <small>Bientôt</small>
+    </button>
+
+    <!-- Pied de page -->
+    <footer class="site-footer">
+        © 2026 TGLD Élite — Tous droits réservés<br>
+        Créé par <strong>Divin</strong> (FASTEK)<br>
+        <a href="https://wa.me/2290164409445" target="_blank" rel="noopener">WhatsApp</a> ·
+        <a href="mailto:tgldivin@gmail.com">tgldivin@gmail.com</a>
+    </footer>
+
+    <!-- Popup de bienvenue : prénom stocké uniquement en local sur l'appareil -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-modal">
+            <h3>Comment tu t'appelles ? 👋</h3>
+            <p>Ton prénom reste uniquement sur cet appareil, pour personnaliser ton expérience.</p>
+            <input type="text" id="input-prenom" placeholder="Ton prénom" maxlength="30">
+            <button onclick="validerPrenom()">Continuer</button>
+            <span class="skip-link" onclick="fermerPopup()">Passer cette étape</span>
+        </div>
+    </div>
+
+    <script src="progress.js"></script>
+    <script>
+        // Statut de la Séquence 1 basé sur la progression réelle
+        const statutEl = document.getElementById('statut-sequence1');
+        const nb = TGLD.nbTermine('sequence1');
+        if (TGLD.sequenceTerminee('sequence1')) {
+            statutEl.textContent = 'Terminée';
+        } else if (nb > 0) {
+            statutEl.textContent = 'En cours (' + TGLD.pourcentage('sequence1') + '%)';
+        } else {
+            statutEl.textContent = 'Pas commencée';
+        }
+
+        // Popup de bienvenue (une seule fois) + personnalisation du héro
+        const prenomExistant = TGLD.getPrenom();
+        const heroTitre = document.getElementById('hero-titre');
+        const overlay = document.getElementById('welcome-overlay');
+
+        if (prenomExistant) {
+            heroTitre.textContent = 'Content de te revoir, ' + prenomExistant + ' 👋';
+            overlay.style.display = 'none';
+        }
+
+        function validerPrenom() {
+            const valeur = document.getElementById('input-prenom').value.trim();
+            if (valeur) {
+                TGLD.setPrenom(valeur);
+                heroTitre.textContent = 'Bienvenue, ' + valeur + ' 👋';
+            }
+            fermerPopup();
+        }
+
+        function fermerPopup() {
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

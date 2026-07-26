@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activité 3 : Comprendre le fonctionnement du Web</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <h1 class="section-header">Activité 3 : Comprendre le fonctionnement du Web</h1>
+
+    <div class="progress-track-page"><div class="progress-fill" id="progress-fill-global" style="width:0%;"></div></div>
+
+    <div class="activity-container">
+
+        <!-- Carte 1 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <h2>Plongée plus profonde dans le Web</h2>
+                <p>Le Web est un moyen d'échanger des informations entre ordinateurs sur Internet, les reliant en une vaste collection de ressources multimédias interactives.</p>
+                <p>Vous cliquez sur les petits mots bleus soulignés, vous cherchez sur Google le sens d'un mot comme "éthéré", vous tapez l'adresse www.quelque-chose, et vous vous retrouvez à regarder des photos de chats. C'est ainsi qu'un site web fonctionne, n'est-ce pas ? Bien sûr, ce n'est pas aussi simple !</p>
+            </div>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <h2>Comment ça marche ?</h2>
+                <p>Considérez le service de livraison de pizza de Domino's comme le Web. D'un côté de la ville se trouve le <strong>client</strong>, qui est comme votre maison où vous voulez que la pizza soit livrée, et de l'autre côté de la ville se trouve le <strong>serveur</strong>, qui est le magasin Domino's où vous voulez commander la pizza.</p>
+            </div>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <p>Avant de discuter du flux complet du fonctionnement du Web, jetons rapidement un coup d'œil à quelques terminologies et essayons de les intégrer dans cette analogie :</p>
+                <p><strong>Internet :</strong> Cela vous permet d'envoyer et de recevoir des données sur le web. C'est fondamentalement comme les routes entre votre maison et le magasin de pizzas qui permettent la livraison de la pizza.</p>
+                <p><strong>TCP/IP :</strong> TCP/IP sont des protocoles de communication qui définissent comment les données doivent voyager sur Internet. C'est comme le mécanisme de transport qui vous aidera à récupérer la pizza du magasin Domino's. Dans ce cas, il peut s'agir du livreur de pizzas.</p>
+                <p style="color:#4a5c72; text-align:center; margin-top: 15px;">Suite à l'écran suivant...</p>
+            </div>
+        </div>
+
+        <!-- Carte 4 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <p><strong>DNS :</strong> Le DNS (Domain Name System) est comme un répertoire d'adresses pour les sites Web. Le navigateur doit trouver sur quel serveur se trouve le site Web, afin de pouvoir envoyer des messages HTTP (Hypertext Transfer Protocol) au bon endroit. C'est comme chercher les pizzas disponibles dans le magasin.</p>
+                <p><strong>HTTP :</strong> C'est un protocole d'application qui définit un langage pour que les clients et les serveurs puissent se parler. C'est comme le langage que vous utiliserez pour commander votre pizza.</p>
+                <p><strong>Fichiers :</strong> Un site Web est composé de nombreux fichiers différents, qui sont comme les différents ingrédients avec lesquels la pizza est faite. Principalement, ces fichiers existent sous les deux types suivants : les fichiers de code et les fichiers de ressources (assets).</p>
+                <p style="color:#4a5c72; text-align:center; margin-top: 15px;">Maintenant que les terminologies ci-dessus et leur rôle sont clairs, dans les prochains écrans, nous examinerons le flux global.</p>
+            </div>
+        </div>
+
+        <!-- Carte 5 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <h2>Le flux global</h2>
+                <p>Maintenant, regardons le flux de la façon dont vous demandez quelque chose sur le Web et le processus qui est suivi pour le délivrer.</p>
+                <p>Une fois que vous tapez l'adresse Web dans votre navigateur (c'est comme passer une commande de pizza chez Domino's), le processus ci-dessous est lancé :</p>
+                <p>1. Le navigateur récupère l'<span style="color:#6a1b9a; text-decoration: underline;">adresse réelle</span> du serveur où le site Web se trouve à partir du serveur DNS. C'est comme choisir la pizza requise parmi celles disponibles au magasin de pizzas.</p>
+            </div>
+        </div>
+
+        <!-- Carte 6 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <p>2. Ensuite, le navigateur envoie un message de requête HTTP au serveur, lui demandant d'envoyer une copie du site Web au client. Ce message et toutes les autres données envoyées entre le client et le serveur sont transmis via votre connexion Internet en utilisant TCP/IP. C'est comme le livreur qui récupère la pizza au magasin.</p>
+                <p style="color:#4a5c72; text-align:center; margin-top: 15px;">Appuyez sur 'Suivant' pour continuer...</p>
+            </div>
+        </div>
+
+        <!-- Carte 7 -->
+        <div class="card">
+            <div class="header">
+                <span class="close-icon">✕</span>
+            </div>
+            <div class="content">
+                <p style="text-align:center; color:#4a5c72;">Suite...</p>
+                <p>3. Si le serveur approuve la demande du client, <span style="color:#6a1b9a; text-decoration: underline;">le serveur envoie au client</span> un message <strong>'200 OK'</strong>. Cela signifie simplement que vous pouvez accéder à la page Web, puis le serveur commence à envoyer de petits morceaux de données de la page Web au client. Cette étape est exactement comme le magasin de pizzas qui confirme les détails de la commande avec le livreur et lui remet la pizza.</p>
+                <p>4. Enfin, le navigateur assemble les petits morceaux de données en une page Web complète et vous l'affiche. Tout comme lorsque la pizza arrive à votre porte pour être savourée !</p>
+                <p style="text-align:center; margin-top: 15px; font-weight:600;">C'est tout ! Voici comment fonctionne le <strong>WEB</strong>.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-links">
+        <a href="activite2.html" class="btn-nav btn-prev">← Retour (Act. 2)</a>
+        <a href="activite4.html" class="btn-nav btn-next" id="lien-suivant">Suivant →</a>
+    </div>
+
+    <script src="../progress.js"></script>
+    <script>
+        TGLD.appliquerBarreActivite('sequence1');
+        TGLD.lierValidationActivite('sequence1', 'activite3', '#lien-suivant');
+    </script>
+
+</body>
+</html>

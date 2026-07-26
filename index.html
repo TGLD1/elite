@@ -31,15 +31,15 @@
     <div class="sequence-grid" style="padding: 0 15px;">
 
         <!-- Séquence 1 (seule séquence disponible pour le moment) -->
-        <a href="sequence1/accueil.html" class="sequence-card">
-            <div class="seq-info">
-                <div class="seq-icon">💡</div>
-                <div>
-                    <div class="seq-title">1. Introduction au HTML</div>
-                    <div class="seq-sub">9 activités • 45 min</div>
-                </div>
+        <a href="sequence1/accueil.html" class="sequence-card-featured">
+            <div class="feat-icon">💡</div>
+            <div class="feat-eyebrow" id="feat-eyebrow">Séquence 1</div>
+            <div class="feat-title">Introduction au HTML</div>
+            <div class="feat-track"><div class="feat-fill" id="feat-fill" style="width:0%;"></div></div>
+            <div class="feat-footer">
+                <span id="feat-statut">Pas commencée</span>
+                <span class="feat-cta" id="feat-cta">Commencer →</span>
             </div>
-            <div class="seq-status" id="statut-sequence1">Pas commencée</div>
         </a>
 
     </div>
@@ -85,15 +85,23 @@
 
     <script src="progress.js"></script>
     <script>
-        // Statut de la Séquence 1 basé sur la progression réelle
-        const statutEl = document.getElementById('statut-sequence1');
+        // Carte vedette de la Séquence 1 : progression réelle + CTA adapté
+        const fillEl = document.getElementById('feat-fill');
+        const statutEl = document.getElementById('feat-statut');
+        const ctaEl = document.getElementById('feat-cta');
         const nb = TGLD.nbTermine('sequence1');
+        const pourcentage = TGLD.pourcentage('sequence1');
+        fillEl.style.width = pourcentage + '%';
+
         if (TGLD.sequenceTerminee('sequence1')) {
-            statutEl.textContent = 'Terminée';
+            statutEl.textContent = 'Terminée ✓';
+            ctaEl.textContent = 'Revoir →';
         } else if (nb > 0) {
-            statutEl.textContent = 'En cours (' + TGLD.pourcentage('sequence1') + '%)';
+            statutEl.textContent = pourcentage + '% complété';
+            ctaEl.textContent = 'Continuer →';
         } else {
-            statutEl.textContent = 'Pas commencée';
+            statutEl.textContent = '9 activités';
+            ctaEl.textContent = 'Commencer →';
         }
 
         // Popup de bienvenue (une seule fois) + personnalisation du héro

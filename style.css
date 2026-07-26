@@ -477,6 +477,43 @@ body {
 .seq-status { background: #28a745; color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; }
 .seq-status.locked { background: #e0e7ef; color: #6c7a8a; }
 
+/* --- Carte séquence "vedette" (accueil) --- */
+.sequence-card-featured {
+    background: linear-gradient(135deg, #0d4a7a 0%, #085691 55%, #1a6fb0 100%);
+    border-radius: 24px;
+    padding: 26px 24px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(8, 86, 145, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sequence-card-featured:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(8, 86, 145, 0.35); }
+.sequence-card-featured::before {
+    content: "";
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 140px; height: 140px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+}
+.sequence-card-featured .feat-icon {
+    width: 52px; height: 52px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+.sequence-card-featured .feat-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #a9d4f2; margin-bottom: 4px; }
+.sequence-card-featured .feat-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; }
+.sequence-card-featured .feat-track { height: 6px; background: rgba(255,255,255,0.25); border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+.sequence-card-featured .feat-fill { height: 100%; background: #ffffff; border-radius: 10px; transition: width 0.3s ease; }
+.sequence-card-featured .feat-footer { display: flex; align-items: center; justify-content: space-between; font-size: 13px; }
+.sequence-card-featured .feat-cta { font-weight: 700; display: flex; align-items: center; gap: 6px; }
+
 /* --- Page Accueil d'une Séquence (Image 2) --- */
 .module-nav { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 500px; margin: 0 auto 10px auto; padding: 0 5px; }
 .back-btn { background: white; border: none; font-size: 20px; cursor: pointer; padding: 8px; border-radius: 50%; color: #1a3b5d; display: flex; align-items: center; }

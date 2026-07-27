@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séquence</title>
+    <link rel="stylesheet" href="style.css">
+    <style> body { background-color: #f5f7fa; } </style>
+</head>
+<body>
+
+    <!-- En-tête de la séquence avec cercle de progression -->
+    <div style="background-color: #085691; padding: 20px 15px 10px 15px; border-radius: 0 0 20px 20px; margin-bottom: 10px;">
+        <div class="module-nav" style="max-width: 100%;">
+            <a href="index.html" id="lien-retour" class="back-btn">←</a>
+            <h3 id="titre-sequence" style="color: white; font-size: 16px; flex:1; text-align: center; margin: 0;">Chargement...</h3>
+            <div class="module-progress-ring">
+                <svg viewBox="0 0 40 40">
+                    <circle id="ring-circle" cx="20" cy="20" r="16" stroke-dasharray="100.53" stroke-dashoffset="100.53" />
+                </svg>
+                <span id="ring-percent">0%</span>
+            </div>
+        </div>
+        <div class="seq-presentation">
+            <p id="presentation-sequence"></p>
+            <div class="seq-skills" id="liste-competences"></div>
+        </div>
+    </div>
+
+    <!-- Liste des Activités -->
+    <div class="activity-list" style="padding: 0 15px;" id="liste-activites"></div>
+
+    <!-- Bouton PRO flottant -->
+    <button class="pro-btn" onclick="alert('Version PRO disponible prochainement !')">
+        <span style="font-size: 18px;">👑</span> ESSAYER PRO <small>Bientôt</small>
+    </button>
+
+    <footer class="site-footer">
+        © 2026 TGLD Élite — Créé par <strong>Divin</strong> (FASTEK) ·
+        <a href="https://wa.me/2290164409445" target="_blank" rel="noopener">WhatsApp</a> ·
+        <a href="mailto:tgldivin@gmail.com">tgldivin@gmail.com</a>
+    </footer>
+
+    <script src="progress.js"></script>
+    <script src="moteur.js"></script>
+    <script>MOTEUR.rendreAccueilSequence();</script>
+
+</body>
+</html>

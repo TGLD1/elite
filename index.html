@@ -31,7 +31,7 @@
     <div class="sequence-grid" style="padding: 0 15px;">
 
         <!-- Séquence 1 (seule séquence disponible pour le moment) -->
-        <a href="sequence1/accueil.html" class="sequence-card-featured">
+        <a href="sequence.html?competence=webdev&sequence=sequence1" class="sequence-card-featured">
             <div class="feat-icon">💡</div>
             <div class="feat-eyebrow" id="feat-eyebrow">Séquence 1</div>
             <div class="feat-title">Introduction au HTML</div>
@@ -84,25 +84,33 @@
     </div>
 
     <script src="progress.js"></script>
+    <script src="moteur.js"></script>
     <script>
-        // Carte vedette de la Séquence 1 : progression réelle + CTA adapté
-        const fillEl = document.getElementById('feat-fill');
-        const statutEl = document.getElementById('feat-statut');
-        const ctaEl = document.getElementById('feat-cta');
-        const nb = TGLD.nbTermine('sequence1');
-        const pourcentage = TGLD.pourcentage('sequence1');
-        fillEl.style.width = pourcentage + '%';
+        (async () => {
+            // Carte vedette de la Séquence 1 : progression réelle + CTA adapté
+            const fillEl = document.getElementById('feat-fill');
+            const statutEl = document.getElementById('feat-statut');
+            const ctaEl = document.getElementById('feat-cta');
 
-        if (TGLD.sequenceTerminee('sequence1')) {
-            statutEl.textContent = 'Terminée ✓';
-            ctaEl.textContent = 'Revoir →';
-        } else if (nb > 0) {
-            statutEl.textContent = pourcentage + '% complété';
-            ctaEl.textContent = 'Continuer →';
-        } else {
-            statutEl.textContent = '9 activités';
-            ctaEl.textContent = 'Commencer →';
-        }
+            const data = await MOTEUR.chargerCompetence('webdev');
+            const seq = MOTEUR.trouverSequence(data, 'sequence1');
+            const cle = TGLD.enregistrerSequence('webdev', 'sequence1', seq.activites.map(a => a.id));
+
+            const nb = TGLD.nbTermine(cle);
+            const pourcentage = TGLD.pourcentage(cle);
+            fillEl.style.width = pourcentage + '%';
+
+            if (TGLD.sequenceTerminee(cle)) {
+                statutEl.textContent = 'Terminée ✓';
+                ctaEl.textContent = 'Revoir →';
+            } else if (nb > 0) {
+                statutEl.textContent = pourcentage + '% complété';
+                ctaEl.textContent = 'Continuer →';
+            } else {
+                statutEl.textContent = seq.activites.length + ' activités';
+                ctaEl.textContent = 'Commencer →';
+            }
+        })();
 
         // Popup de bienvenue (une seule fois) + personnalisation du héro
         const prenomExistant = TGLD.getPrenom();

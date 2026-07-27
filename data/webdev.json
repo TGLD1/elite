@@ -1,0 +1,1061 @@
+{
+  "competence": {
+    "id": "webdev",
+    "domaineId": "programmation",
+    "titre": "Développement Web",
+    "icone": "💻",
+    "description": "Apprends à créer des sites web de A à Z : structure, style, interactivité."
+  },
+  "sequences": [
+    {
+      "id": "sequence1",
+      "titre": "Introduction au HTML",
+      "presentation": "Cette séquence pose les fondations du développement web : ce qu'est le Web, comment il fonctionne, et comment structurer votre toute première page avec HTML.",
+      "competencesAcquises": [
+        "Internet vs Web",
+        "Fonctionnement du Web",
+        "Logiciels essentiels",
+        "Bases du HTML",
+        "Votre 1ère page web"
+      ],
+      "niveauAcces": "gratuit",
+      "activites": [
+        {
+          "id": "activite1",
+          "titre": "Introduction",
+          "duree": "8 min",
+          "icone": "c-blue",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": "Développement Web",
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Voulez-vous apprendre le développement web ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est un excellent choix, car le développement web est un parcours professionnel incroyable. Il offre une carrière rapide et stimulante, centrée sur la résolution créative de problèmes et l'innovation continue."
+                },
+                {
+                  "type": "p",
+                  "texte": "Mais apprendre le développement web peut s'avérer décourageant, car il existe des millions de ressources en ligne. C'est pourquoi nous avons conçu ce cours. Votre solution unique pour tous vos besoins en développement web."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Commencer avec TGLD Élite"
+                },
+                {
+                  "type": "p",
+                  "texte": "Ce tutoriel de développement web fera de vous un développeur web en y consacrant quelques minutes par jour pour parcourir chaque sujet, comprendre la théorie sous-jacente et implémenter divers programmes, vous aidant ainsi à apprendre à coder."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite2",
+          "titre": "Qu'est-ce que le Web ?",
+          "duree": "4 min",
+          "icone": "c-red",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": "Le Web",
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Le réseau Internet fait partie intégrante et de plus en plus importante de la vie quotidienne des personnes à travers le monde. C'est ce réseau qui rend le Web possible. Sans Internet, le Web ne peut tout simplement pas exister !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Internet est un <strong>réseau mondial</strong> composé de milliards d'ordinateurs et d'autres appareils électroniques. Vous pouvez le considérer comme un système mondial de réseaux informatiques, également appelé <strong>un réseau de réseaux</strong>, où chaque réseau est un nœud."
+                }
+              ]
+            },
+            {
+              "titre": "Le Web",
+              "blocs": [
+                {
+                  "type": "html",
+                  "texte": "<div class=\"highlight-box\">Internet = Interconnecté + Réseau</div>"
+                },
+                {
+                  "type": "p",
+                  "texte": "Salut l'ami ! Bienvenue dans toute première section de ton parcours de développement web. Dans cette section, nous allons rapidement comprendre quelques concepts avant de se plonger réellement dans le développement web."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Comprendre le Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Vous pourriez penser que les termes « Web » et « Internet » sont interchangeables. Mais sont-ils vraiment identiques ? Bien sûr que non !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Internet est une <strong>infrastructure</strong> qui permet de connecter des milliards d'ordinateurs. Parmi eux, certains ordinateurs, également appelés serveurs Web, peuvent envoyer des messages compréhensibles aux navigateurs Web."
+                },
+                {
+                  "type": "p",
+                  "texte": "Par conséquent, on peut considérer Internet comme une infrastructure, tandis que le Web est un service construit au-dessus de cette infrastructure."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Internet et le Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Considérez l'analogie ci-dessous pour comprendre la différence entre l'Internet et le Web en termes très simples."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Analogie :</strong> Vous pouvez considérer l'Internet comme l'électricité, les voies ferrées comme le Web, les trains qui vont d'une destination à l'autre comme les Données, et les quais comme le navigateur Web."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "WWWW"
+                },
+                {
+                  "type": "p",
+                  "texte": "Les deux écrans précédents vous ont donné un aperçu de l'idée sur laquelle repose le Web. Mais, qu'est-ce que le Web exactement ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le Web est le nom courant du célèbre acronyme <strong>WWW</strong>, qui signifie simplement <strong>World Wide Web</strong>. Le WWW est un sous-ensemble de l'Internet composé de pages qu'un navigateur Web peut consulter. En termes simples, il s'agit d'un système interconnecté de pages Web publiques accessibles via Internet."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Le Web est <strong>l'une des nombreuses applications construites au-dessus d'Internet</strong>."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "En savoir plus sur le WWWW"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le World Wide Web est l'univers des informations accessibles en réseau, une incarnation du savoir humain. C'est un moyen d'échanger des informations entre ordinateurs sur Internet, en les reliant en une vaste collection de ressources multimédias interactives."
+                },
+                {
+                  "type": "p",
+                  "texte": "À l'époque, <strong>Tim Berners-Lee</strong> a proposé l'architecture de ce qui est devenu le World Wide Web tel que nous le connaissons aujourd'hui."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Il a créé le premier serveur Web, le premier navigateur Web et la première page Web sur son ordinateur au Laboratoire de recherche en physique du CERN en 1990. Un an plus tard, il a annoncé sa création sur le groupe de discussion « <em>alt.hypertext</em> », marquant le moment où le Web a été rendu public pour la première fois."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Conclusion"
+                },
+                {
+                  "type": "p",
+                  "texte": "Voilà tout ce qu'il y a à savoir sur le Web !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Maintenant que vous avez compris ces termes de base, vous vous demandez peut-être comment ce Web fonctionne exactement. La prochaine section de ce parcours tente d'explorer ce sujet."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite3",
+          "titre": "Comprendre le fonctionnement du Web",
+          "duree": "8 min",
+          "icone": "c-purple",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Plongée plus profonde dans le Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le Web est un moyen d'échanger des informations entre ordinateurs sur Internet, les reliant en une vaste collection de ressources multimédias interactives."
+                },
+                {
+                  "type": "p",
+                  "texte": "Vous cliquez sur les petits mots bleus soulignés, vous cherchez sur Google le sens d'un mot comme \"éthéré\", vous tapez l'adresse www.quelque-chose, et vous vous retrouvez à regarder des photos de chats. C'est ainsi qu'un site web fonctionne, n'est-ce pas ? Bien sûr, ce n'est pas aussi simple !"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Comment ça marche ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Considérez le service de livraison de pizza de Domino's comme le Web. D'un côté de la ville se trouve le <strong>client</strong>, qui est comme votre maison où vous voulez que la pizza soit livrée, et de l'autre côté de la ville se trouve le <strong>serveur</strong>, qui est le magasin Domino's où vous voulez commander la pizza."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Avant de discuter du flux complet du fonctionnement du Web, jetons rapidement un coup d'œil à quelques terminologies et essayons de les intégrer dans cette analogie :"
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Internet :</strong> Cela vous permet d'envoyer et de recevoir des données sur le web. C'est fondamentalement comme les routes entre votre maison et le magasin de pizzas qui permettent la livraison de la pizza."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>TCP/IP :</strong> TCP/IP sont des protocoles de communication qui définissent comment les données doivent voyager sur Internet. C'est comme le mécanisme de transport qui vous aidera à récupérer la pizza du magasin Domino's. Dans ce cas, il peut s'agir du livreur de pizzas."
+                },
+                {
+                  "type": "p",
+                  "texte": "Suite à l'écran suivant..."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "<strong>DNS :</strong> Le DNS (Domain Name System) est comme un répertoire d'adresses pour les sites Web. Le navigateur doit trouver sur quel serveur se trouve le site Web, afin de pouvoir envoyer des messages HTTP (Hypertext Transfer Protocol) au bon endroit. C'est comme chercher les pizzas disponibles dans le magasin."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>HTTP :</strong> C'est un protocole d'application qui définit un langage pour que les clients et les serveurs puissent se parler. C'est comme le langage que vous utiliserez pour commander votre pizza."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Fichiers :</strong> Un site Web est composé de nombreux fichiers différents, qui sont comme les différents ingrédients avec lesquels la pizza est faite. Principalement, ces fichiers existent sous les deux types suivants : les fichiers de code et les fichiers de ressources (assets)."
+                },
+                {
+                  "type": "p",
+                  "texte": "Maintenant que les terminologies ci-dessus et leur rôle sont clairs, dans les prochains écrans, nous examinerons le flux global."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Le flux global"
+                },
+                {
+                  "type": "p",
+                  "texte": "Maintenant, regardons le flux de la façon dont vous demandez quelque chose sur le Web et le processus qui est suivi pour le délivrer."
+                },
+                {
+                  "type": "p",
+                  "texte": "Une fois que vous tapez l'adresse Web dans votre navigateur (c'est comme passer une commande de pizza chez Domino's), le processus ci-dessous est lancé :"
+                },
+                {
+                  "type": "p",
+                  "texte": "1. Le navigateur récupère l'<span style=\"color:#6a1b9a; text-decoration: underline;\">adresse réelle</span> du serveur où le site Web se trouve à partir du serveur DNS. C'est comme choisir la pizza requise parmi celles disponibles au magasin de pizzas."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "2. Ensuite, le navigateur envoie un message de requête HTTP au serveur, lui demandant d'envoyer une copie du site Web au client. Ce message et toutes les autres données envoyées entre le client et le serveur sont transmis via votre connexion Internet en utilisant TCP/IP. C'est comme le livreur qui récupère la pizza au magasin."
+                },
+                {
+                  "type": "p",
+                  "texte": "Appuyez sur 'Suivant' pour continuer..."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Suite..."
+                },
+                {
+                  "type": "p",
+                  "texte": "3. Si le serveur approuve la demande du client, <span style=\"color:#6a1b9a; text-decoration: underline;\">le serveur envoie au client</span> un message <strong>'200 OK'</strong>. Cela signifie simplement que vous pouvez accéder à la page Web, puis le serveur commence à envoyer de petits morceaux de données de la page Web au client. Cette étape est exactement comme le magasin de pizzas qui confirme les détails de la commande avec le livreur et lui remet la pizza."
+                },
+                {
+                  "type": "p",
+                  "texte": "4. Enfin, le navigateur assemble les petits morceaux de données en une page Web complète et vous l'affiche. Tout comme lorsque la pizza arrive à votre porte pour être savourée !"
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est tout ! Voici comment fonctionne le <strong>WEB</strong>."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite4",
+          "titre": "Apprentissage du développement web",
+          "duree": "4 min",
+          "icone": "c-yellow",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Page Web, Site Web, Développement Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Jusqu'à présent, plusieurs termes ont peut-être été lancés, comme <strong>site web</strong>, <strong>page web</strong>, <strong>développement web</strong>, <strong>développeur web</strong>, etc. Que signifient-ils exactement ? Qu'est-ce qu'un site web, techniquement ? Et que désigne exactement le développement web ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Répondons à ces questions maintenant !"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Page Web ou Site Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Un <strong>site web</strong>, comme son nom l'indique, est un site sur le Web. Ici, le Web désigne le réseau/Internet. Tout comme un terrain sur lequel on construit sa maison, un site web est un emplacement sur un serveur réseau où vous pouvez stocker votre contenu."
+                },
+                {
+                  "type": "p",
+                  "texte": "En dehors de cela, techniquement parlant, un site web est une collection de <strong>pages web</strong> publiées sur un serveur web et accessibles via un réseau/Internet en utilisant l'adresse du site."
+                },
+                {
+                  "type": "p",
+                  "texte": "En termes simples, un site web est une collection de pages web. Les pages web sont des pages en ligne que vous pouvez consulter en utilisant Internet et le service Web sur un ordinateur ou un smartphone."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Qu'est-ce que le développement web ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le <strong>développement web</strong>, également connu sous le nom de développement de sites web, fait référence aux tâches associées à la création, la construction et la maintenance de sites web et d'applications web qui fonctionnent en ligne sur un navigateur."
+                },
+                {
+                  "type": "p",
+                  "texte": "Il est étroitement lié au travail de conception des fonctionnalités et de la logique des applications web. Le terme développement est généralement réservé à la construction effective de ces choses, c'est-à-dire la <strong>programmation</strong> des sites."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Cela se fait en écrivant des lignes de <span style=\"color:#6a1b9a; text-decoration: underline;\">code</span>, en utilisant une variété de langages de programmation, qui varient en fonction des tâches à effectuer et des plateformes sur lesquelles ils travaillent."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Conclusion"
+                },
+                {
+                  "type": "p",
+                  "texte": "Pour conclure, un site web, au cœur de son essence, n'est qu'un moyen de collecter et d'afficher publiquement des informations. Quelle que soit la complexité d'un site web, tout se résume à cet objectif fondamental."
+                },
+                {
+                  "type": "p",
+                  "texte": "En avançant, nous examinerons les différentes technologies utilisées pour développer les pages web et les applications web."
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est tout pour cette section... <span style=\"display:inline-block; background:#2b7bb9; color:white; font-size:10px; padding:2px 6px; border-radius:3px;\">FIN</span>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite5",
+          "titre": "Logiciels requis",
+          "duree": "7 min",
+          "icone": "c-green",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Logiciels requis"
+                },
+                {
+                  "type": "p",
+                  "texte": "Nous savons que votre patience est à son comble. Cela fait plusieurs chapitres que nous avons entamé ce cours sans écrire une seule ligne de code. Mais, nous vous promettons qu'à partir du prochain chapitre, nous allons nous lancer dans le développement web intensif."
+                },
+                {
+                  "type": "p",
+                  "texte": "Une base solide est nécessaire lorsqu'on se lance dans un domaine comme le développement web. Et ces chapitres ont essayé de fournir cela. Finalement, installons quelques programmes logiciels requis que nous utiliserons assez fréquemment."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Éditeur de texte"
+                },
+                {
+                  "type": "p",
+                  "texte": "Un éditeur de texte est un logiciel informatique utilisé pour éditer du texte brut. Il se distingue d'un traitement de texte car il ne gère pas le formatage de documents ou d'autres fonctionnalités couramment utilisées en PAO (publication assistée par ordinateur)."
+                },
+                {
+                  "type": "p",
+                  "texte": "Pour commencer le développement web, avoir accès à un éditeur de texte peut être bénéfique pour écrire du code basique. Vous avez probablement déjà un éditeur de texte basique sur votre ordinateur. Par défaut, Windows inclut le <strong>Bloc-notes (Notepad)</strong> et macOS est livré avec <strong>TextEdit</strong>."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Comme nous l'avons vu, vous pouvez utiliser un éditeur de texte pour écrire du code web basique. Cependant, à mesure que la longueur et la complexité du code augmentent, il est préférable de passer à <span style=\"color:#6a1b9a; text-decoration: underline;\">un éditeur de code</span> qui est spécialisé à cet effet."
+                },
+                {
+                  "type": "p",
+                  "texte": "Vous pouvez utiliser <strong>Visual Studio (VS) Code</strong>, qui est un éditeur de code source gratuit créé par Microsoft pour Windows, Linux et macOS. Il inclut la prise en charge du débogage, de la coloration syntaxique, de l'auto-complétion intelligente, d'extraits de code, de la refactorisation de code et de Git intégré."
+                },
+                {
+                  "type": "p",
+                  "texte": "De plus, vous pouvez utiliser tout autre éditeur de code que vous connaissez, comme Atom, Sublime Text, ou d'autres. Nous utiliserons VS Code pour l'ensemble de la série de cours sur le développement web."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Le Navigateur Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Un navigateur web est l'outil le plus important pour les développeurs web. Il est tout simplement indispensable pour de nombreuses tâches, de la recherche sur le Web au débogage de scripts. De plus, vous verrez le résultat de votre code dans un navigateur, puisque vous développez une application web."
+                },
+                {
+                  "type": "p",
+                  "texte": "Par conséquent, avoir accès à un navigateur compatible, rapide et offrant des tonnes d'outils pour les développeurs web est un must. Probablement, tous les systèmes sont livrés avec un navigateur web par défaut, mais nous vous recommandons d'utiliser <strong>Google Chrome</strong>."
+                },
+                {
+                  "type": "p",
+                  "texte": "Si vous n'avez pas Chrome installé, vous pouvez le télécharger ici - <br/>\n<a href=\"https://www.google.com/intl/en_in/chrome/\" style=\"color:#6a1b9a; text-decoration: underline; word-break: break-all;\" target=\"_blank\">https://www.google.com/intl/en_in/chrome/</a>"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "À ce stade, vous devriez avoir tous les outils mentionnés précédemment installés sur votre système. Nous aurions en effet besoin de quelques outils supplémentaires. Cependant, nous les prendrons au besoin. Pour l'instant, vous aurez besoin d'un éditeur de texte/code et d'un navigateur pour commencer."
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est tout ! En avançant, nous commencerons le développement web et mettrons la main à la pâte avec la technologie de programmation la plus fondamentale pour structurer notre page web - <strong>HTML</strong>."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Tâche :</strong> Avant de rejoindre le prochain chapitre, voici une tâche pour vous ! Pouvez-vous trouver ce que signifie HTML ? Faites une recherche rapide sur Google et nous nous retrouverons dans le prochain chapitre."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite6",
+          "titre": "Rencontrez le HTML",
+          "duree": "9 min",
+          "icone": "c-magenta",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Les ordinateurs ne comprennent pas la langue que nous parlons (l'anglais), et nous ne parlons pas la langue qu'ils comprennent (le langage binaire). Par conséquent, nous devons apprendre des langages et des techniques que les humains et les ordinateurs comprennent."
+                },
+                {
+                  "type": "p",
+                  "texte": "Ainsi, nous pouvons faire faire aux ordinateurs des choses et exécuter des tâches en écrivant un programme pour eux en utilisant divers langages de programmation. Les langages de programmation sont les langages que les ordinateurs comprennent et que nous pouvons apprendre, nous permettant ainsi de communiquer avec ces machines."
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est ce qu'on appelle le <strong>Codage / la Programmation</strong>."
+                },
+                {
+                  "type": "p",
+                  "texte": "Pour conclure, la programmation est la séquence d'étapes d'instructions que nous écrivons pour l'ordinateur afin qu'il puisse comprendre et effectuer certaines tâches pour nous !"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Vous connaissez peut-être divers langages de programmation tels que <strong>Java</strong>, <strong>Python</strong>, <strong>C</strong>, et bien d'autres, qui vous permettent d'écrire des programmes informatiques et peuvent être utilisés pour le développement de logiciels, ainsi que pour de nombreux autres cas d'utilisation."
+                },
+                {
+                  "type": "p",
+                  "texte": "Maintenant que nous comprenons que la programmation est la séquence d'instructions que nous écrivons pour l'ordinateur afin qu'il puisse comprendre et effectuer des tâches pour nous. Et si la tâche consistait à interagir avec Internet et à créer une page Web ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Voici l'arrivée des <strong>langages de balisage</strong> !"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Les <strong>langages de balisage</strong> sont des langages qui peuvent être utilisés pour créer divers documents pouvant être chargés dans un navigateur Web via Internet, vous aidant ainsi à interagir avec le Web et à développer diverses pages Web."
+                },
+                {
+                  "type": "p",
+                  "texte": "Ce n'est peut-être pas une définition parfaite et technique des langages de balisage, mais elle suffit pour vous donner un avant-goût de ce que sont exactement ces langages."
+                },
+                {
+                  "type": "p",
+                  "texte": "L'un de ces langages de balisage est le <strong>HTML</strong>, que nous allons apprendre dans ce cours et qui vous permettra de créer des pages Web et de travailler sur le Web."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Le langage du Web - HTML"
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>HTML</strong> signifie HyperText Markup Language (Langage de balisage hypertexte) !"
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est la fondation de tous les sites Web et représente le strict minimum nécessaire pour créer un site Web. Selon les statistiques, <strong>environ 94 %</strong> des sites Web actuellement disponibles sur Internet, et probablement tous ceux que vous visitez, sont structurés à l'aide du HTML."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Au niveau le plus basique, c'est un langage de balisage pour le Web qui définit la structure du Web et constitue l'un des éléments de base les plus fondamentaux de chaque site Web. Gardant cela à l'esprit, nous examinerons le <strong>HTML</strong> plus en profondeur dans la section suivante."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite7",
+          "titre": "Un regard approfondi sur le HTML",
+          "duree": "12 min",
+          "icone": "c-blue",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Le cœur du Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le <strong>HTML</strong> est le langage central du World Wide Web et a été initialement conçu comme un langage pour décrire sémantiquement des documents scientifiques. Cependant, il s'est désormais adapté pour décrire la structure de base des pages Web et des applications en ligne."
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est un langage qui dit aux navigateurs Web comment structurer les pages Web que vous visitez, qui peuvent être aussi compliquées ou aussi simples que le développeur Web le souhaite."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "De plus, c'est la <strong>donnée brute</strong> à partir de laquelle une page Web est construite. Tout le texte, les liens, les cartes, les listes, les boutons ou tous les autres éléments visuels que vous voyez sur la page Web sont créés en HTML."
+                },
+                {
+                  "type": "p",
+                  "texte": "En termes simples, <strong>HTML met des informations sur une page Web</strong> !"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "HyperText et Balisage !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Décomposons l'acronyme HTML et comprenons-le mieux :"
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>1. HyperText :</strong> Le terme \"HyperText\" fait référence à la façon dont les pages Web (documents HTML) sont liées entre elles. C'est simplement le texte organisé pour connecter des éléments connexes, permettant aux visiteurs de cliquer et d'aller vers une autre page ou une autre partie de la page."
+                },
+                {
+                  "type": "p",
+                  "texte": "Lier des informations de cette manière a <strong>révolutionné le Web</strong>. Ainsi, ensemble, HTML et Internet permettent à quiconque d'accéder à tous les types d'informations dans le monde, dans l'ordre qu'il souhaite."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "<strong>2. Markup (Balisage) :</strong> Le balisage est un guide de style pour composer tout ce qui se trouve sur une page Web. Il définit des annotations dans le fichier HTML qui ne sont pas affichées sur la page Web elle-même, mais qui agissent en coulisses pour dire aux navigateurs comment afficher le document aux visiteurs."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>3. Language :</strong> Enfin, c'est un langage que le Web comprend et qui peut être utilisé pour interagir avec lui."
+                },
+                {
+                  "type": "p",
+                  "texte": "Simple ? C'est le HTML..."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Un peu d'histoire"
+                },
+                {
+                  "type": "p",
+                  "texte": "Waouh ! Il semble que vous connaissiez bien le HTML maintenant ! Avant d'avancer, jetons un coup d'œil rapide au parcours du HTML."
+                },
+                {
+                  "type": "p",
+                  "texte": "Le <strong>HTML</strong> a été présenté pour la première fois par <span style=\"color:#6a1b9a; text-decoration: underline;\">Tim Berners-Lee</span>, le créateur du World Wide Web, en 1989."
+                },
+                {
+                  "type": "p",
+                  "texte": "En remontant quelques années auparavant, en 1980, le physicien Tim Berners-Lee a eu l'idée d'un système dans lequel les documents pouvaient être stockés et partagés avec les chercheurs du CERN."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Les documents seraient stockés sur un <strong>serveur</strong> et les chercheurs pourraient y accéder via un <strong>navigateur Web</strong>."
+                },
+                {
+                  "type": "p",
+                  "texte": "Par conséquent, il a créé le Web à l'origine pour permettre aux physiciens de collaborer et de partager leurs travaux entre eux."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Un peu d'histoire"
+                },
+                {
+                  "type": "p",
+                  "texte": "En 1989, il a composé une mise à jour proposant un <strong>Système Hypertexte</strong> basé sur Internet pour les ordinateurs mondiaux. L'idée de Tim Berners-Lee était un modèle dans lequel les utilisateurs peuvent naviguer d'un ensemble d'informations sur un ordinateur à un autre ensemble d'informations sur un autre ordinateur."
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est ainsi que le <strong>HTML</strong> est né... 🎉"
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Curiosité générale :</strong> Cliquez <a href=\"https://info.cern.ch/hypertext/WWW/TheProject.html\" rel=\"noopener\" style=\"color:#6a1b9a; text-decoration: underline;\" target=\"_blank\">ici</a> pour voir la toute première page Web au monde."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Est-ce un langage de programmation ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le HTML est généralement désigné comme un <strong>langage de balisage</strong> ! Cela signifie-t-il que ce n'est pas un langage de programmation ?"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le débat pour savoir si le HTML est ou non un langage de programmation est un débat permanent parmi les développeurs Web et les experts. Eh bien, si vous voulez être technique, le <strong>HTML n'est pas un langage de programmation</strong> car il ne se préoccupe que de <strong>présenter l'information</strong>."
+                },
+                {
+                  "type": "p",
+                  "texte": "Il n'est pas utilisé pour programmer une quelconque logique !"
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Un langage est qualifié de langage de programmation lorsqu'il exécute des fonctions, effectue des tâches, travaille avec de la logique, etc. Alors que le <strong>HTML</strong> ne fait vraiment rien. Il donne simplement aux navigateurs le contenu dont ils ont besoin pour afficher."
+                },
+                {
+                  "type": "p",
+                  "texte": "Mais laissons les experts débattre de cette question pendant que nous l'apprenons, indépendamment de son titre de \"langage de programmation\" ou non."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite8",
+          "titre": "Votre première page Web",
+          "duree": "5 min",
+          "icone": "c-red",
+          "type": "lecture",
+          "niveauAcces": "gratuit",
+          "cartes": [
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Travaillons avec le HTML !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Le <strong>HTML</strong> est la base de tous les sites Web et représente le strict minimum nécessaire pour créer un site Web. C'est un langage qui dit aux navigateurs Web comment structurer les pages Web que vous visitez, qui peuvent être aussi compliquées ou aussi simples que le développeur Web le souhaite."
+                },
+                {
+                  "type": "p",
+                  "texte": "Il est temps de mettre la main à la pâte avec le HTML et de créer votre première page Web !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Créer votre première page Web est aussi simple que de créer un fichier HTML et de le charger dans un navigateur. Voyons comment vous pouvez faire cela..."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Les fichiers HTML ne sont rien d'autre que de simples <strong>fichiers texte</strong>. Donc, pour commencer à écrire en HTML, vous n'avez besoin de rien de plus qu'un simple éditeur de texte. Par conséquent, vous pouvez utiliser le Bloc-notes (Notepad) ou TextEdit selon votre système d'exploitation Windows ou macOS."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>1.</strong> Créez un dossier, de préférence sur votre Bureau, et nommez-le <strong>'htmlFiles'</strong>."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>2.</strong> Ouvrez votre éditeur de texte et enregistrez un fichier vide sous le nom <strong>'myFirstWebPage.html'</strong> dans ce dossier."
+                },
+                {
+                  "type": "p",
+                  "texte": "C'est votre premier document HTML ! De plus, votre première page Web est également prête, ce qui est certes une page Web vide pour le moment."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Note :</strong> Assurez-vous d'ajouter '.html' au nom du fichier. L'extension .html est l'extension de fichier pour un document HTML, tout comme .txt l'est pour un document texte."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "Il est temps de charger la page sur le Web et de visualiser votre document HTML sur le Web !"
+                },
+                {
+                  "type": "p",
+                  "texte": "Eh bien, pour visualiser les documents HTML, ils n'ont même pas besoin d'être sur le Web. Vous pouvez simplement ouvrir un navigateur Web tel que Chrome, Firefox, Safari ou Internet Explorer, et dans la barre d'adresse (où vous tapez habituellement les adresses Web), tapez l'emplacement du fichier que vous venez d'enregistrer (par exemple, <em>'C:/Users/John/Desktop/htmlFiles/myFirstWebPage.html'</em>) et appuyez sur Entrée (Enter)."
+                },
+                {
+                  "type": "p",
+                  "texte": "Autrement, allez dans le dossier où vous avez enregistré le document et double-cliquez sur le document HTML."
+                },
+                {
+                  "type": "p",
+                  "texte": "Votre page Web devrait ressembler à celle de l'illustration ci-dessus ! La voilà, votre première page Web. Comme c'est excitant !! Tout ce qu'il a fallu, c'est la création d'un fichier HTML."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Votre première page Web"
+                },
+                {
+                  "type": "p",
+                  "texte": "La page Web pour le moment n'est qu'un document blanc vide ! Avant d'aller plus loin, ajoutons quelques données à la page Web vide."
+                },
+                {
+                  "type": "p",
+                  "texte": "Allez simplement dans votre fichier HTML (document) et tapez ce que vous voulez, comme (Modifiez le document via votre éditeur de texte/code) :"
+                },
+                {
+                  "type": "html",
+                  "texte": "<div style=\"background-color: #f0f4f9; padding: 15px; border-radius: 8px; text-align: center; color: #1a3b5d; font-weight: 500; margin: 10px 0;\">\n                    Woah ! Je viens de créer ma première page Web.\n                </div>"
+                },
+                {
+                  "type": "p",
+                  "texte": "Une fois terminé, cliquez sur Enregistrer pour sauvegarder les modifications apportées au document, allez dans le navigateur où votre page Web est ouverte, et actualisez simplement le navigateur. Cela chargera toutes les modifications dans le document HTML et devrait ressembler à l'illustration ci-dessous..."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "h2",
+                  "texte": "Passer à la suite"
+                },
+                {
+                  "type": "p",
+                  "texte": "Soyez fier et sautez de joie ! Vous venez de créer votre première page Web et avez fait vos premiers pas pour devenir un développeur Web. 💪"
+                },
+                {
+                  "type": "p",
+                  "texte": "Certes, la page Web ne ressemble pas à celle dont vous avez peut-être rêvé, mais elle prendra lentement forme au fur et à mesure que vous apprendrez le HTML et structurerez la page Web."
+                },
+                {
+                  "type": "p",
+                  "texte": "<strong>Note :</strong> Au lieu d'utiliser un simple éditeur de texte, vous pouvez utiliser l'éditeur de code VS Code, celui que nous avons suggéré. Ouvrez simplement l'éditeur de code et créez un nouveau fichier à partir du menu Fichier. Les étapes suivantes restent exactement les mêmes."
+                }
+              ]
+            },
+            {
+              "titre": null,
+              "blocs": [
+                {
+                  "type": "p",
+                  "texte": "En avançant vers le prochain chapitre, nous examinerons les éléments de base du HTML et commencerons à structurer notre page Web. 👨‍💻"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "activite9",
+          "titre": "Test de validation",
+          "duree": "10 min",
+          "icone": "c-purple",
+          "type": "quiz",
+          "niveauAcces": "gratuit",
+          "introHtml": "<h2>Félicitations ! 🎉</h2><p>Vous avez terminé l'intégralité de la Séquence 1.</p><p>Répondez aux 5 questions ci-dessous en faisant défiler la page. À la fin, cliquez sur \"Vérifier les résultats\". Si vous avez tout bon, vous passez à la suite. Sinon, vous devrez tout recommencer de zéro.</p>",
+          "questions": [
+            {
+              "question": "Q1. Quelle est la différence fondamentale entre l'Internet et le Web ?",
+              "options": [
+                {
+                  "valeur": "A",
+                  "texte": "A. L'Internet est une infrastructure, le Web est un service."
+                },
+                {
+                  "valeur": "B",
+                  "texte": "B. L'Internet est un service, le Web est une infrastructure."
+                },
+                {
+                  "valeur": "C",
+                  "texte": "C. C'est exactement la même chose."
+                },
+                {
+                  "valeur": "D",
+                  "texte": "D. Le Web est un langage, l'Internet est un protocole."
+                }
+              ],
+              "correct": "A"
+            },
+            {
+              "question": "Q2. Qui a inventé le World Wide Web (HTML) ?",
+              "options": [
+                {
+                  "valeur": "A",
+                  "texte": "A. Bill Gates"
+                },
+                {
+                  "valeur": "B",
+                  "texte": "B. Steve Jobs"
+                },
+                {
+                  "valeur": "C",
+                  "texte": "C. Tim Berners-Lee"
+                },
+                {
+                  "valeur": "D",
+                  "texte": "D. Mark Zuckerberg"
+                }
+              ],
+              "correct": "C"
+            },
+            {
+              "question": "Q3. HTML est-il un langage de programmation ?",
+              "options": [
+                {
+                  "valeur": "A",
+                  "texte": "A. Oui, car il exécute de la logique complexe."
+                },
+                {
+                  "valeur": "B",
+                  "texte": "B. Non, c'est un langage de balisage qui structure l'information."
+                },
+                {
+                  "valeur": "C",
+                  "texte": "C. Oui, c'est un langage machine de bas niveau."
+                },
+                {
+                  "valeur": "D",
+                  "texte": "D. Non, c'est un logiciel comme un éditeur de texte."
+                }
+              ],
+              "correct": "B"
+            },
+            {
+              "question": "Q4. De quel équipement logiciel a-t-on absolument besoin pour commencer à coder ?",
+              "options": [
+                {
+                  "valeur": "A",
+                  "texte": "A. Un serveur puissant et une connexion fibre optique."
+                },
+                {
+                  "valeur": "B",
+                  "texte": "B. Un éditeur de texte (ou de code) et un navigateur web."
+                },
+                {
+                  "valeur": "C",
+                  "texte": "C. Une licence payante pour l'éditeur VS Code."
+                },
+                {
+                  "valeur": "D",
+                  "texte": "D. Une connaissance parfaite du langage binaire."
+                }
+              ],
+              "correct": "B"
+            },
+            {
+              "question": "Q5. Quelle extension de fichier est utilisée pour les documents HTML ?",
+              "options": [
+                {
+                  "valeur": "A",
+                  "texte": "A. .txt"
+                },
+                {
+                  "valeur": "B",
+                  "texte": "B. .doc"
+                },
+                {
+                  "valeur": "C",
+                  "texte": "C. .html"
+                },
+                {
+                  "valeur": "D",
+                  "texte": "D. .exe"
+                }
+              ],
+              "correct": "C"
+            }
+          ],
+          "messageSucces": "🎉 Félicitations ! Vous avez parfaitement répondu à toutes les questions. Vous êtes prêt pour la Séquence 2 !",
+          "messageErreur": "❌ Oups ! Certaines réponses sont incorrectes.<br/>\n<strong>Aucun indice ne vous sera donné.</strong> Réfléchissez bien et recommencez le test."
+        }
+      ]
+    },
+    {
+      "id": "sequence2",
+      "titre": "Bases du CSS",
+      "presentation": "À rédiger.",
+      "competencesAcquises": [],
+      "niveauAcces": "gratuit",
+      "activites": []
+    }
+  ]
+}

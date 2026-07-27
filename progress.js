@@ -5,11 +5,15 @@ const TGLD = {
 
     STORAGE_KEY: 'tgld_progress',
 
-    SEQUENCES: {
-        sequence1: {
-            titre: 'Introduction au HTML',
-            activites: ['activite1', 'activite2', 'activite3', 'activite4', 'activite5', 'activite6', 'activite7', 'activite8', 'activite9']
-        }
+    // Rempli dynamiquement par le moteur au chargement des données JSON d'une compétence.
+    // Clé = "competenceId:sequenceId" (ex: "webdev:sequence1")
+    SEQUENCES: {},
+
+    // Enregistre une séquence (appelé par le moteur après chargement du JSON)
+    enregistrerSequence(competenceId, sequenceId, listeIdsActivites) {
+        const cle = competenceId + ':' + sequenceId;
+        this.SEQUENCES[cle] = { activites: listeIdsActivites };
+        return cle;
     },
 
     _lire() {
@@ -45,18 +49,21 @@ const TGLD = {
     // Nombre d'activités terminées dans une séquence
     nbTermine(sequence) {
         const data = this._lire();
-        if (!data[sequence]) return 0;
+        if (!data[sequence] || !this.SEQUENCES[sequence]) return 0;
         return this.SEQUENCES[sequence].activites.filter(a => data[sequence][a]).length;
     },
 
     // Pourcentage de progression d'une séquence (0-100)
     pourcentage(sequence) {
+        if (!this.SEQUENCES[sequence]) return 0;
         const total = this.SEQUENCES[sequence].activites.length;
+        if (total === 0) return 0;
         return Math.round((this.nbTermine(sequence) / total) * 100);
     },
 
     // La séquence entière est-elle terminée ?
     sequenceTerminee(sequence) {
+        if (!this.SEQUENCES[sequence]) return false;
         return this.nbTermine(sequence) === this.SEQUENCES[sequence].activites.length;
     },
 

@@ -521,10 +521,11 @@ body {
 .module-progress-ring svg { position: absolute; top: 0; left: 0; transform: rotate(-90deg); width: 50px; height: 50px; }
 .module-progress-ring circle { fill: none; stroke: white; stroke-width: 4; stroke-dasharray: 125.6; stroke-dashoffset: 0; }
 
-/* --- Onglets de la Séquence --- */
-.tabs { display: flex; width: 100%; max-width: 500px; border-bottom: 1px solid #e0e7ef; margin-bottom: 15px; }
-.tabs a { flex: 1; text-align: center; padding: 12px 0; font-weight: 600; color: #6c7a8a; text-decoration: none; border-bottom: 3px solid transparent; transition: 0.2s; }
-.tabs a.active { color: #085691; border-bottom-color: #085691; }
+/* --- Présentation de la séquence (remplace les anciens onglets) --- */
+.seq-presentation { max-width: 500px; margin: 4px auto 0 auto; padding: 0 5px 16px 5px; }
+.seq-presentation p { color: rgba(255,255,255,0.9); font-size: 13px; line-height: 1.6; margin-bottom: 12px; }
+.seq-skills { display: flex; flex-wrap: wrap; gap: 8px; }
+.seq-skills span { background: rgba(255,255,255,0.15); color: white; font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 12px; }
 
 /* --- Liste des Activités --- */
 .activity-list { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 500px; }
